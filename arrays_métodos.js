@@ -89,6 +89,7 @@ num.forEach( num =>{ if (num  === 3) {console.log(num)}   } )
 //*Método map()
 // Este método si hace cambios en el arreglo
 
+console.log("map ", num );
 var MasUno = num.map( num => { return num+1;  }    )
 console.log("Variables de num +1");
 console.log(MasUno);

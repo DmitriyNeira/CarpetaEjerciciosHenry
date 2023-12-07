@@ -179,8 +179,9 @@ var mes=[];
    } else return "No se encontraron los meses pedidos";
 }*/
 var integers = [100, 4, 56, 78, 200, 120, 7, 160, 148, 22];
-console.log(mayorACien(integers));
+//console.log(mayorACien(integers));
 
+/*
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
@@ -199,4 +200,127 @@ function mayorACien(array) {
 
    return nummay100;
 
+}*/
+
+/*console.log(crearGato("mishi", 8));
+
+function crearGato(nombre, edad) {
+   // Debes crear un nuevo objeto con las propiedades "nombre" y "edad".
+   // Ambas propiedades deben tener el valor correspondiente recibido por parámetro.
+   // Además, agregar una propiedad con el nombre "meow".
+   // La propiedad "meow" será una función que retorne el string: "Meow!".
+   // Retornar el objeto.
+   // Tu código:
+   var gato = {
+      nombre: nombre,
+      edad: edad
+   };
+
+   gato.meow = function() {
+      return "Meow!";
+   };
+
+   return gato.meow();
+}*/
+
+var gato = {
+   nombre: "nieve",
+   edad: 3
+};
+
+//console.log(agregarPropiedad(gato, "color"));
+function agregarPropiedad(objeto, propiedad) {
+   // Recibirás un objeto por parámetro.
+   // Debes agregarle una propiedad con el nombre recibido por parámetro.
+   // Esta propiedad será igual al valor `null`.
+   // Retornar el objeto.
+   // Tu código:
+   objeto[propiedad]=null;
+   return objeto;
+
+}
+
+const user = {
+   usernombre: 'Jhon Doe',
+   password: 'JavaScript es genial!',
+   posts: [
+      {
+         id: '1',
+         title: 'Aventuras en JS!',
+         likes: 10,
+      },
+      {
+         id: '2',
+         title: 'Soy Henry!',
+         likes: 100,
+      },
+      {
+         id: '3',
+         title: 'Qué es un JavaScript?',
+         likes: 35,
+      },
+      {
+         id: '4',
+         title: 'JS Objects for Dummies',
+         likes: 42,
+      },
+      {
+         id: '5',
+         title: 'Educación online',
+         likes: 99,
+      },
+   ],
+};
+
+
+/*console.log(sumarLikesDeUsuario(user));
+
+function sumarLikesDeUsuario(objetoUsuario) {
+   // El parámetro "objetoUsuario" tiene una propiedad llamada "posts" que es un arreglo.
+   // Este arreglo contiene objetos (post).
+   // Cada post posee una propiedad llamada "likes". Esta propiedad es un número.
+   // Debes sumar los likes de todos los post y retornar el resultado.
+   // Tu código:
+   var like=0;
+
+   for (let i=0;i<objetoUsuario.posts.length;i++){
+      
+      like= like+ objetoUsuario.posts[i].likes;
+      
+
+   }
+   return like;
+}*/
+const storeItem = {
+   precio: 80,
+   porcentajeDeDescuento: 0.1,
+};
+const storeItem2 = {
+   precio: 5,
+   porcentajeDeDescuento: 0.5,
+};
+
+
+console.log(agregarMetodoCalculoDescuento(storeItem2));
+function agregarMetodoCalculoDescuento(objetoProducto) {
+   // Agrega una propiedad al "objetoProducto" con el nombre "calcularPrecioDescuento".
+   // Esta propiedad debe ser una función que multiplique el precio del producto por el porcentajeDeDescuento.
+   // El "objetoProducto" posee una propiedad "precio" y una propiedad "porcentajeDeDescuento".
+   // Luego debes restar del precio total del producto ese valor de descuento.
+   // Retornar el precio final.
+   // Ejemplo:
+   // Precio ---> 10
+   // PorcentajeDeDescuento ---> 0.2
+   // Precio final ---> 8
+   // Tu código:
+   objetoProducto.calcularPrecioDescuento= function(){
+      Descuento=this.porcentajeDeDescuento*this.precio;
+      let Precio_Final=this.precio-Descuento;
+      return Precio_Final
+   };
+//! ERROR, Aquí estás haciendo que no se pueda reconocer el resultado fuera de la función.
+//! Es una operación interna, por lo que debes acceder al objeto directamente para acceder desde afuera.
+//? Aún no entiendo bien, ¿por qué?
+// ! return objetoProducto.calcularPrecioDescuento();
+ return objetoProducto;
 }
